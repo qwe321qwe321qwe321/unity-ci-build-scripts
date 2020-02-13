@@ -26,4 +26,4 @@ else
   echo "Unexpected exit code $UNITY_EXIT_CODE";
 fi
 
-[$UNITY_TEST_EXIT_CODE -eq 0]
+[ $UNITY_TEST_EXIT_CODE -eq 0 ]
