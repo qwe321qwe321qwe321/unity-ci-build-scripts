@@ -8,7 +8,7 @@ ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x2
   -projectPath $PROJECT_PATH \
   -runTests \
   -testPlatform $TEST_PLATFORM \
-  -testResults ${PROJECT_PATH}$TEST_PLATFORM-results.xml \
+  -testResults /root/project/${PROJECT_PATH}$TEST_PLATFORM-results.xml \
   -logFile \
   -batchmode
 
