@@ -36,4 +36,5 @@ pwd
 echo $BUILD_PATH
 ls $BUILD_PATH
 ls -la $BUILD_PATH
+ls $PROJECT_PATH
 [ -n "$(ls -A $BUILD_PATH)" ] # fail job if build folder is empty

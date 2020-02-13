@@ -115,7 +115,7 @@ static class BuildCommand
 		var buildTarget = GetBuildTarget ();
 		var buildPath = GetBuildPath ();
 		var buildName = GetBuildName ();
-		var fixedBuildPath = GetFixedBuildPath (buildTarget, buildPath, buildName);
+		var fixedBuildPath = System.IO.Directory.GetCurrentDirectory() + GetFixedBuildPath (buildTarget, buildPath, buildName);
 
 		var buildInfo = BuildPipeline.BuildPlayer (GetEnabledScenes (), fixedBuildPath, buildTarget, GetBuildOptions ());
 		if( buildInfo.summary.result == BuildResult.Succeeded ) {
