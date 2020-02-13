@@ -31,6 +31,9 @@ elif [ $UNITY_EXIT_CODE -eq 3 ]; then
 else
   echo "Unexpected exit code $UNITY_EXIT_CODE";
 fi
-
+ls
+pwd
+echo $BUILD_PATH
+ls $BUILD_PATH
 ls -la $BUILD_PATH
 [ -n "$(ls -A $BUILD_PATH)" ] # fail job if build folder is empty
