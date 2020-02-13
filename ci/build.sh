@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
-set -x
+set -e #This means Exit immediately if a command exits with a non-zero status in any below codes.
+#set -x #This means echo everything you wrote.
 
 echo "Building for $BUILD_TARGET"
 

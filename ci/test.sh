@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#set -x
+#set -x #This means echo everything you wrote.
 
 echo "Testng for $TEST_PLATFORM"
 
