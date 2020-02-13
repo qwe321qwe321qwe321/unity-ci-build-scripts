@@ -5,10 +5,10 @@ set -x
 echo "Testng for $TEST_PLATFORM"
 
 ${UNITY_EXECUTABLE:-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity} \
-  -projectPath $(cwd)/$PROJECT_PATH \
+  -projectPath $PROJECT_PATH \
   -runTests \
   -testPlatform $TEST_PLATFORM \
-  -testResults $(cwd)/${PROJECT_PATH}$TEST_PLATFORM-results.xml \
+  -testResults ${PROJECT_PATH}$TEST_PLATFORM-results.xml \
   -logFile \
   -batchmode
 
@@ -24,5 +24,5 @@ else
   echo "Unexpected exit code $UNITY_EXIT_CODE";
 fi
 
-cat $(cwd)/${PROJECT_PATH}$TEST_PLATFORM-results.xml | grep test-run | grep Passed
+cat ${PROJECT_PATH}$TEST_PLATFORM-results.xml | grep test-run | grep Passed
 exit $UNITY_TEST_EXIT_CODE
